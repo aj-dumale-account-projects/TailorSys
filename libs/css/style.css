@@ -7,7 +7,7 @@
 .hero{
     height: 100%;
     width: 100%;
-    background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url(../images/bg.jpg);
+    background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url(../images/dick.jpg);
     background-position: center;
     background-size: cover;
     position: absolute;
@@ -25,6 +25,7 @@
 
 .button-box{
     width: 220px;
+    text-align: center;
     margin: 35px auto;
     position: relative;
     box-shadow: 0 0 20px 9px #ff61241f;
@@ -32,7 +33,7 @@
 }
 
 .toggle-button{
-    padding: 10px 30px;
+    padding: 15px 30px;
     cursor: pointer;
     background: transparent;
     border: 0;
