@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,400;1,200&display=swap');
+/* singup page styling */
+body{
+    font-family: 'Roboto Mono', monospace;
+}
+.signup-container{
+    border: 1px solid black;
+    padding: 10px;
+    width: 50%;
+    margin: auto;
+    margin-top: 10%;
+}
+
+.signup-container .signup-content, .signup-header, input, button{
+    font-family: 'Roboto Mono', monospace;
+    font-weight: bold;
+    padding: 7px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    width: 75%;
+    margin: auto;
+    margin-top: 10px;
+    font-size: 19px;
+    outline: none;
+    border-radius: 3px;
+}
+.signup-container .signup-content button{
+    width: 50%;
+    display: flex;
+    align-items: stretch;
+    transition: ease-in-out 0.5s;
+}
+
+.signup-container .signup-content button:hover{
+    width: 50%;
+    display: flex;
+    align-items: stretch;
+    cursor: pointer;
+    background-color: gray;
+    transition: ease-in-out 0.5s;
+}
