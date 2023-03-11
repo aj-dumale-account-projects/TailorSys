@@ -7,6 +7,7 @@ include_once "layout_head.php";
 
 <form action="<?php htmlspecialchars($_SERVER["PHP_SELF"]);  ?>" method="post">
 
+<h1> betlog 123</h1>
 <div class="signup-container">
     <div class="signup-header">
         <h2>Create an account now!</h2>
