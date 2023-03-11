@@ -24,8 +24,6 @@ include_once "layout_head.php";
     </div>
 </div>
 
-
-
 </form>
 
 
