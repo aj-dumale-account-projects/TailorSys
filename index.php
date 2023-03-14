@@ -3,6 +3,8 @@
 $page_title = "TailorSys";
 include_once "layout_head.php"; 
 
+
+
 ?>
 
 <!-- signup content here -->
@@ -19,18 +21,19 @@ include_once "layout_head.php";
             <img src="libs/images/tw.png">
             <img src="libs/images/gp.png">
         </div>
-        <form id="login" class="input-group">
+        <form id="login" class="input-group" action="login_process.php" method="post">
             <input type="text" class="input-field" placeholder="Username" required>
-            <input type="text" class="input-field" placeholder="Enter Password" required>
+            <input type="text" class="input-field" placeholder="Password" required>
             <input type="checkbox" class="check-box"><span>Remember Password</span>
-            <button type="submit" class="submit-button">Log In</button>
+            <button type="submit" value="login" class="submit-button">Log In</button>
         </form>
         <form id="register" method="post" class="input-group">
             <input type="text" class="input-field" placeholder="Username" required>
             <input type="email" class="input-field" placeholder="Email Address" required>
-            <input type="text" class="input-field" placeholder="Enter Password" required>
+            <input type="text" class="input-field" placeholder="Password" required>
+            <input type="text" class="input-field" placeholder="Confirm Password" required>
             <input type="checkbox" class="check-box"><span>I Agree to the Terms & Conditions</span>
-            <button type="submit" class="submit-button">Register</button>
+            <button type="submit" value="register" class="submit-button">Register</button>
         </form>
     </div>
 </div>
