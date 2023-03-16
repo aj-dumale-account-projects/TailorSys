@@ -9,7 +9,7 @@
 .hero{
     height: 100%;
     width: 100%;
-    background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url(../images/ahegao.jpg);
+    background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url(../images/bg.jpg);
     background-position: center;
     background-size: cover;
     position: absolute;
@@ -50,12 +50,13 @@
     position: absolute;
     width: 140px;
     height: 100%;
-    background: linear-gradient(to right, #ff105f, #ffad06);
+    background: #8B0000;
     border-radius: 30px;
     transition: .5s;
 }
 
 .social-icons{
+    top: 50px;
     margin: 30px auto;
     text-align: center;
 }
@@ -68,7 +69,7 @@
 }
 
 .input-group{
-    top: 180px;
+    top: 215px;
     position: absolute;
     width: 280px;
     transition: .5s;
@@ -90,12 +91,14 @@
 }
 
 .submit-button{
+    color: white;
+    font-weight: bold;
     width: 85%;
     padding: 10px 30px;
     cursor: pointer;
     display: block;
     margin: 15px;
-    background: linear-gradient(to right, #ff105f, #ffad06);
+    background: #8B0000;
     border: 0;
     outline: none;
     border-radius: 30px;
@@ -129,6 +132,12 @@ span{
 
 #register{
     left: 450px;
+}
+
+.error_message{
+    border: 1px solid red;
+    text-align: center;
+    padding: 5px;
 }
 
 

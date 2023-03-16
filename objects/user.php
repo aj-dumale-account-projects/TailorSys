@@ -1,47 +1,51 @@
 <?php
-class Product{
+class User{
  
     // database connection and table name
     private $conn;
-    private $table_name = "products";
+    private $table_name = "users";
  
     // object properties
     public $id;
     public $name;
-    public $price;
-    public $description;
-    public $category_id;
+    public $email_address;
+    public $password;
     public $timestamp;
  
     public function __construct($db){
         $this->conn = $db;
     }
  
-    // create product
+    // create product 
     function create(){
  
         //write query
         $query = "INSERT INTO
                     " . $this->table_name . "
                 SET
-                    name=:name, price=:price, description=:description, category_id=:category_id, created=:created";
+                    name=:name, 
+                    email_address=:email_address,
+                    password=:password,
+                    created=:created";
  
         $stmt = $this->conn->prepare($query);
+
+    
  
         // posted values
         $this->name=htmlspecialchars(strip_tags($this->name));
-        $this->price=htmlspecialchars(strip_tags($this->price));
-        $this->description=htmlspecialchars(strip_tags($this->description));
-        $this->category_id=htmlspecialchars(strip_tags($this->category_id));
- 
+        $this->email_address=htmlspecialchars(strip_tags($this->email_address));
+        $this->password=htmlspecialchars(strip_tags($this->password));
+
         // to get time-stamp for 'created' field
         $this->timestamp = date('Y-m-d H:i:s');
- 
+
+        $hash_password = password_hash($this->password, PASSWORD_BCRYPT);
+
         // bind values 
         $stmt->bindParam(":name", $this->name);
-        $stmt->bindParam(":price", $this->price);
-        $stmt->bindParam(":description", $this->description);
-        $stmt->bindParam(":category_id", $this->category_id);
+        $stmt->bindParam(":email_address", $this->email_address);
+        $stmt->bindParam(":password", $hash_password);
         $stmt->bindParam(":created", $this->timestamp);
  
         if($stmt->execute()){
